@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Datos abstractos en programación</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+        integrity="sha512-4oRvFJzE5Zi0yrNipUhXUx3KP6Lk2w8akpVjDlx6JpY8e36sT8a7m1MHgV3sCsbDhTvoJ1oWb4AdRcBlsz6BUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-BumqmrKUZOf+nfpv0mIxZlv0PXZr8V7HfM3AwvP+Ph79SsbnJaxmqO9S2cvKqZGzxDW1ZLILpNRrY0juU4mpqg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
+        integrity="sha512-xxu/CzQj1jXv8BwZo0EDJ4sYUanRzZzCWeC3WZuvbtp/KuWn+LPhlHk6xTTtiGtXdo10Ma+54LjBOWf/ro0h6Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pilas">Pilas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#colas">Colas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#listas">Listas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#arboles">Árboles</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Datos abstractos en programación</h1>
+        <p>En programación, los datos abstractos son estructuras de datos que se utilizan para almacenar y organizar
+            datos de manera eficiente. Hay muchos tipos diferentes de datos abstractos, cada uno con sus propias
+            características y funciones.</p>
+
+        <div id="pilas">
+            <h2>Pilas</h2>
+            <p>Una pila es una estructura de datos en la que el último elemento agregado es el primero en ser eliminado
+                (LIFO, Last In First Out). En una pila, los elementos se agregan y eliminan desde la parte superior, que
+                se llama cima de la pila.</p>
+            <pre><code>
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+    return self.items.pop()def is_empty(self):
+    return len(self.items) == 0
+    
+    def peek(self):
+    return self.items[-1]
+    </code></pre>
+        </div>
+
+        <div id="colas">
+            <h2>Colas</h2>
+            <p>Una cola es una estructura de datos en la que el primer elemento agregado es el primero en ser eliminado
+                (FIFO,
+                First In First Out). En una cola, los elementos se agregan al final y se eliminan desde el frente.</p>
+            <pre><code>class Queue:
+        def init(self):
+        self.items = []def enqueue(self, item):
+        self.items.append(item)
+        
+        def dequeue(self):
+        return self.items.pop(0)
+        
+        def is_empty(self):
+        return len(self.items) == 0
+        
+        def peek(self):
+        return self.items[0]
+        </code></pre>
+        </div>
+
+        <div id="listas">
+            <h2>Listas</h2>
+            <p>Una lista es una estructura de datos que puede contener una colección de elementos. A diferencia de los
+                arrays,
+                las listas pueden cambiar de tamaño dinámicamente y pueden contener elementos de diferentes tipos.</p>
+            <pre><code>class List:
+            def init(self):
+            self.items = []def add(self, item):
+            self.items.append(item)
+            
+            def remove(self, item):
+            self.items.remove(item)
+            
+            def is_empty(self):
+            return len(self.items) == 0
+            
+            def size(self):
+            return len(self.items)
+            </code></pre>
+        </div>
+
+        <div id="arboles">
+            <h2>Árboles</h2>
+            <p>Un árbol es una estructura de datos no lineal compuesta por nodos conectados entre sí mediante enlaces o
+                ramas.
+                Cada nodo en un árbol puede tener cero o más nodos hijos.</p>
+            <pre><code>class TreeNode:
+                def init(self, data):
+                self.data = data
+                self.children = []def add_child(self, child):
+                self.children.append(child)
+                </code></pre>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-BumqmrKUZOf+nfpv0mIxZlv0PXZr8V7HfM3AwvP+Ph79SsbnJaxmqO9S2cvKqZGzxDW1ZLILpNRrY0juU4mpqg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
+        integrity="sha512-xxu/CzQj1jXv8BwZo0EDJ4sYUanRzZzCWeC3WZuvbtp/KuWn+LPhlHk6xTTtiGtXdo10Ma+54LjBOWf/ro0h6Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
